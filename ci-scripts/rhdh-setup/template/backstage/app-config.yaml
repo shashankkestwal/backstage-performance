@@ -21,11 +21,12 @@ catalog:
         clientSecret: ${CLIENT_SECRET}
         userQuerySize: 1000
         groupQuerySize: 1000
+        query: ""
         schedule:
           frequency: 
             hours: 2
           timeout: 
-            minutes: 1
+            minutes: 10
           initialDelay: 
             minutes: 1
 techdocs:
