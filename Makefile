@@ -96,7 +96,7 @@ LOCUST_OPERATOR_REPO=locust-k8s-operator
 LOCUST_OPERATOR=locust-operator
 
 # Locust operator chart version (pinned to 1.1.1 for v1 API compatibility)
-LOCUST_OPERATOR_CHART_VERSION ?= 1.1.1
+LOCUST_OPERATOR_CHART_VERSION ?= 2.1.1
 
 .DEFAULT_GOAL := help
 

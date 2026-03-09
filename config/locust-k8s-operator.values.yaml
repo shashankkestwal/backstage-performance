@@ -7,18 +7,19 @@ k8s:
   clusterRole:
     enabled: true
 
-config:
-  loadGenerationPods:
-    resource:
-      cpuRequest: 250m
-      memRequest: 256Mi
-      ephemeralRequest: 30Mi
-      cpuLimit: 250m
-      memLimit: 256Mi
-      ephemeralLimit: 100Mi
-    metricsExporter:
-      image: "quay.io/backstage-performance/locust_exporter:latest"
-      pullPolicy: Always
+locustPods:
+  resource:
+    request:
+      cpu: 250m
+      memory: 256Mi
+      ephemeralStorage: 30Mi
+    limits:
+      cpu: 250m
+      memory: 256Mi
+      ephemeralStorage: 100Mi
+  metricsExporter:
+    image: "quay.io/backstage-performance/locust_exporter:latest"
+    pullPolicy: Always
 
 serviceAccount:
   name: ${LOCUST_NAMESPACE}-locust-k8s-operator
